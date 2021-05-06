@@ -1,23 +1,25 @@
 import React from 'react'
 import {Link} from 'react-dom'
+
+import { StyledShowCard } from './ShowCard.styled';
  const ShowCard = ({ id, image ,name, summary}) => {
     const summaryTextAs = summary 
     ? `${summary.split(' ').slice( 0 , 10).join(' ').replace(/<.+?>/g, '')}...`
     : 'No description';
     return (
-        <div>
-            <div>
+        <StyledShowCard>
+            <div className="img-wrapper" >
                 <img src={image} alt="show"/>
             </div>
 
             <h1>{name}</h1>
 
             <p>{summaryTextAs}</p>
-            <div>
+            {/* <div className="btns">
                 <Link to={`/show/${id}`}>Read More</Link>
                 <button type="button">Star me</button>
-            </div>
-        </div>
+            </div> */}
+        </StyledShowCard>
     );
 };
  
