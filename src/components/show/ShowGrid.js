@@ -9,7 +9,7 @@ import { FlexGrid } from '../styled'
 
                 data.map(({show}) => (
                     <ShowCard 
-                    key={show.key}
+                    key={show.id}
                     id={show.id}
                     name={show.name}
                     image={show.image ? show.image.medium : IMAGE_NOT_FOUND}
