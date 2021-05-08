@@ -1,15 +1,17 @@
 import React from 'react'
+import { DetailsWrapper } from './Details.styled'
+
 
  const Details = ({ status, premiered, network }) => {
     return (
-        <div>
+        <DetailsWrapper>
             <p>
                 Status: <span>{status}</span>
             </p>
             <p>
                 Premiered: <span>{premiered}</span>
             </p>
-        </div>
+        </DetailsWrapper>
     );
 };
 export default Details
